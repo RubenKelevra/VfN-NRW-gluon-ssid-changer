@@ -1,9 +1,9 @@
 gluon-ssid-changer
 ==================
 
-_This branch of the script contains the ssid-changer version for the gluon 
-2018.1.x branch (current "master"). For older releases of Gluon use the branches
-"2017.1.x" and "2016.2.x"._
+_This branch of the script contains the ssid-changer version for the gluon branches 
+2018.1.x and 2018.2.x  (current "master"). For older releases of Gluon use the
+branches "2017.1.x" and "2016.2.x"._
 
 This package adds a script to change the SSID to an Offline-SSID when there is
 no connection to any gateway.
@@ -18,11 +18,11 @@ You can enable/disable it in the config mode.
 Once every timeframe it checks if there's still a gateway reachable. There can be
 selected two algorithms to analyze if a gateway is reacheable:
 
-- `tq_limit` enabled: define an upper and lower limit to turn the offline_ssid 
-  on and off in-between these two values the SSID will never be changed to
-  prevent it from toggeling every minute.
-- `tq_limit` disabled: there will be only checked, if the gateway is reachable
-  with:
+- `tq_limit_enabled=true`: (not working with BATMAN_V) define an upper and lower
+  limit to turn the offline_ssid on and off in-between these two values the SSID
+  will never be changed to prevent it from toggeling every minute.
+- `tq_limit_enabled=false`: there will be only checked, if the gateway is
+  reachable with:
 
         batctl gwl -H
 
