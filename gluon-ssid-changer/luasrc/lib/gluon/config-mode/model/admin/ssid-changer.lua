@@ -7,7 +7,7 @@ local f = Form(pkg_i18n.translate('Offline-SSID'))
 
 local s = f:section(Section, nil, pkg_i18n.translate(
 	'Here you can enable to automatically change the SSID to the Offline-SSID '
-  .. 'when the node has no connection to the selected Gateway.'
+	.. 'when the node has no connection to the selected Gateway.'
 ))
 
 local enabled = s:option(Flag, 'enabled', pkg_i18n.translate('Enabled'))

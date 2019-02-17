@@ -9,7 +9,7 @@ This package adds a script to change the SSID when there is no connection to any
 gateway. This Offline-SSID can be generated from the node's hostname with the
 first and last part of the node name or the MAC address allowing observers to
 recognize which node does not have a connection to a gateway. This script is
-called once every minute by ``micron.d`` and check gateway-connectivity. It will
+called once every minute by ``micrond`` and check gateway-connectivity. It will
 change the SSID to the Offline-SSID after the node lost gateway connectivity for
 several consecutive checks. As soon as the gateway-connectivity is back it
 toggles back to the original SSID.
